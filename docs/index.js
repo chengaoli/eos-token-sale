@@ -157,25 +157,25 @@ var render = ({
 }) => <div>
   <p style={{ width: "95%" }}>
 
-    This will generate a private and public key pair for the EOS chain. The code is not mine.
-    It is forked from the code the EOS team built. The difference is that this works in any browser without the web3 dependency.
-    It will work in any browser and you don't need any plugins. I've also removed everything else except the key generation bits.
+    这个程序会为你产生一对EOS的公私钥对，这个代码不是我写的。 它是复制的EOS团队所写的代码。所不同的是这个程序不需要依赖web3。 
+    你需要的仅仅是浏览器，它不会要求你安装任何的插件。而且我还移除了除生成密钥外的其他功能代码。
 
   </p>
-  Source code can be reviewed here: <a href="https://github.com/Nadejde/eos-token-sale">https://github.com/Nadejde/eos-token-sale</a>.
+  源代码在这里：<a href="https://github.com/Nadejde/eos-token-sale">https://github.com/Nadejde/eos-token-sale</a>.
+  翻译后的源代码在这里：<a href="https://github.com/chengaoli/eos-token-sale">https://github.com/chengaoli/eos-token-sale</a>.
   <br />
   <br />
-  <strong> If you found this helpful please consider making a small donation (ETH): 0x0bbe518debf97fb2e27d955b050cbd1e8ca90264 </strong>
+  <strong> 如果这个程序对你有帮助的话，你可以考虑给原作者捐赠(ETH): 0x0bbe518debf97fb2e27d955b050cbd1e8ca90264 </strong>
   <div>
     <div className="pane">
       <table><tbody>
         <tr>
-          <th>EOS public key</th>
+          <th>EOS 公钥</th>
           <td style={{ textAlign: "left" }}>
             <span>
               <a href="#" id="generate-link" style={{ float: "right" }}
                  onClick={event => (generate(), event.preventDefault())}>
-                Generate EOS key
+                生成 EOS 公私钥对
               </a>
             </span>
           </td>
@@ -184,16 +184,16 @@ var render = ({
     </div>
     <div className="hidden pane" id="generate-pane">
       <span id="generate-progress">
-        Generating key...
+        正在生成密钥对...
       </span>
       <div id="generate-confirm" className="hidden">
-        <h3>{publicKey ? "Change" : "Register"} EOS key</h3>
+        <h3>{publicKey ? "更改" : "注册"} EOS 密钥对</h3>
 
-        {publicKey ? <p>This will replace your EOS claim key:
+        {publicKey ? <p>这里会替换成你的EOS密钥对:
           <table>
             <tbody>
               <tr>
-                <th>Public key</th>
+                <th>公钥</th>
                 <td style={{textAlign: 'left'}}>
                   <span style={{width: '30em'}}>{publicKey}</span>
                 </td>
@@ -202,22 +202,19 @@ var render = ({
           </table>
         </p> : <span></span>}
 
-        <p>Please back up the private key displayed below in multiple
-        safe locations before continuing.  You should make more than
-        one copy and keep all copies in separate secure locations.
-        If you use an external storage device such as a USB stick,
-        make sure to safely eject the device before continuing.</p>
+        <p>在你继续做其他操作前请在多个安全的地方备份好下面生成的私钥。你应该要有多份拷贝，并且这些拷贝分开存放于安全的地方。
+        如果你使用的是外设像USB设备等，请确保你已经安全移除了你的外设。</p>
 
         <table>
           <tbody>
             <tr>
-              <th>Description</th>
+              <th>描述</th>
               <td style={{ textAlign: "left" }}>
-                EOS Token Sale Claim Key
+                EOS 原生币钱包
               </td>
             </tr>
             <tr>
-              <th>Public key</th>
+              <th>公钥</th>
               <td style={{textAlign: 'left'}}>
                 <code id="generate-pubkey" style={{ width: "30em" }}></code>
               </td>
@@ -226,7 +223,7 @@ var render = ({
               </td>
             </tr>
             <tr>
-              <th>Private key</th>
+              <th>私钥</th>
               <td style={{ textAlign: "left" }}>
                 <code id="generate-privkey" style={{ width: "30em" }}></code>
               </td>
@@ -240,9 +237,7 @@ var render = ({
 
         <p>
 
-          There is no way to recover your private key.  You must save
-          it right now or you will be unable to access your EOS tokens
-          when the sale ends.
+          记住没有任何人有任何办法来恢复你的私钥。你必须立刻保存好你的公私钥对（这就是EOS结束售卖后所需要的原生币钱包）。
 
         </p>
       </div>
