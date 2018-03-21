@@ -1,3 +1,3 @@
-This will generate a private and public key pair for the EOS chain. The code is not mine.
-    It is forked from the code the EOS team built. The difference is that this works in any browser without the web3 dependency.
-    It will work in any browser and you don't need any plugins.
+这个程序会为你产生一对EOS的公私钥对，这个代码不是我写的。
+它是复制的EOS团队所写的代码。所不同的是这个程序不需要依赖web3。
+你需要的仅仅是浏览器，它不会要求你安装任何的插件。
